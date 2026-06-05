@@ -1,0 +1,8 @@
+# 编译产物
+build/
+
+# 由 setup_client.sh 填充的外部头文件与库文件（不入库，仅保留占位 README）
+client/include/*
+client/lib/*
+!client/include/README.md
+!client/lib/README.md
