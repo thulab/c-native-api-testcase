@@ -53,8 +53,8 @@
 
 本仓库沉淀 SessionC 接口测试的可重复执行资产，当前入库内容包括：
 
-- `test/`：151 个 gtest 测试函数，覆盖 CSV 台账中的 153 条需求用例；测试函数统一使用
-  `CaseNN_` 前缀关联用例编号。
+- `test/`：154 个 gtest 测试函数，覆盖 CSV 台账中的 156 条需求用例（含新增 154-156 预编译误用用例）；
+  测试函数统一使用 `CaseNN_` 前缀关联用例编号。
 - `test/common/c_test_common.h`：连接参数、树模型/表模型会话 RAII 包装、SQL 执行、查询结果读取、
   Tablet 与清理辅助函数。
 - `compile.sh` / `run.sh`：本地编译和执行入口，运行后生成
@@ -115,7 +115,7 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 ## 三、用例与需求对应
 
 - 需求文档：`V2.0.10.1-接口模块-SessionC接口-需求分析`
-- 测试用例台账：`原生接口测试用例 - 新增 C Session.csv`（共 153 条）
+- 测试用例台账：`原生接口测试用例 - 新增 C Session.csv`（共 156 条，含新增 154-156）
 - 每个 `TEST` 以 `CaseNN_` 前缀标注对应用例序号，便于回填测试结论。
 
 ### 关于异常/边界用例的实现约定
@@ -128,6 +128,54 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
   并在用例注释中标注（见 `Case105/109/112/118`）。
 - 个别需求期望但当前实现未做客户端校验的点（如 `set_row_count` 上界）在用例注释中以 `NOTE`
   标注为「待确认项」。
+
+## 三点五、代码覆盖率测试（SDK 源码覆盖率）
+
+衡量本测试套件对 **SessionC SDK 源码**（`SessionC.cpp` 等）的覆盖程度，而非测试代码自身。
+由于 `libiotdb_session.so` 默认是无插桩的预编译产物，需用 `--coverage` 重新编译 SDK 后再跑测试。
+
+> 工具：`gcov` + `lcov`（≥1.15）+ `genhtml`；要求 `gcc` 与 `gcov` 主版本一致。
+
+### 步骤
+
+```bash
+# 1) 给 SDK 注入覆盖率选项并重编（在 client-cpp 的 cmake 构建目录，-O0 避免行号失真）
+SDK_BUILD=<client-cpp>/target/build/main
+cd "$SDK_BUILD"
+cp -f libiotdb_session.so libiotdb_session.so.orig.bak   # 备份原始非插桩 so
+cmake -DCMAKE_CXX_FLAGS="-fprofile-arcs -ftest-coverage -O0 -g" \
+      -DCMAKE_SHARED_LINKER_FLAGS="-fprofile-arcs -ftest-coverage" .
+make -j$(nproc)                                          # 生成插桩 so + .gcno
+
+# 2) 用插桩 so 替换测试程序的 client/lib，跑全量测试生成 .gcda
+cp -f client/lib/libiotdb_session.so client/lib/libiotdb_session.so.orig.bak
+cp -f "$SDK_BUILD/libiotdb_session.so" client/lib/
+./compile.sh && ./run.sh
+
+# 3) 采集并生成报告（必须剔除 thrift 自动生成代码，否则总覆盖率被严重稀释）
+lcov --capture --directory "$SDK_BUILD" --output-file coverage/raw.info \
+     --ignore-errors mismatch,gcov,source,negative,unused,empty
+lcov --extract coverage/raw.info "*/generated-sources-cpp/*" --output-file coverage/sdk.info --ignore-errors unused,empty
+lcov --remove coverage/sdk.info "*IClientRPCService*" "*_types.*" "*_constants.*" "*/thrift/*" \
+     --output-file coverage/final.info --ignore-errors unused,empty
+genhtml coverage/final.info --output-directory coverage/html --ignore-errors source,empty,category
+```
+
+### 覆盖率结果（最近一次）
+
+- SDK 整体：行 58.6%，函数 56.0%（24 个手写源文件，已剔除 thrift 生成代码）
+- **C 接口核心 `SessionC.cpp`：行 82.5%，函数 100%**（96 个 `ts_*` 接口全覆盖）
+
+### 有意义覆盖原则
+
+- **不为覆盖而覆盖**：`SessionC.cpp` 中约 52 行重复的 `session/tablet is null` 防御分支，代表性接口已验证，
+  逐个接口补 NULL 测试无新缺陷发现价值，**不补**。
+- **补真实误用路径**：预编译语句的真实误用（用例 154-156：漏绑参数 execute、set_string 传 NULL、
+  new 传 NULL out_param_count）已补充，命中对应防御分支。
+- 覆盖率产物（`coverage/`、`*.gcda/gcno/gcov/info`）不入库，详见 `.gitignore`。
+- 覆盖率测完后应将 `client/lib` 与 SDK 的 `.so` 还原为原始非插桩版（`*.orig.bak`）。
+
+---
 
 ## 四、运行测试规则
 
@@ -148,17 +196,19 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 
 | 节点 | 角色 | 机器码（SystemInfo） |
 |---|---|---|
-| 172.20.31.63 | leader | `02-URA5CM25-MJJRUN77-A3AR5KCQ` |
-| 172.20.31.65 | 节点   | `02-VU2NQAJV-TKM27GBC-OTQ54OCJ` |
-| 172.20.31.70 | 节点   | `02-YB2NG77V-4EFDQT6U-6FWRWNH7` |
+| 172.20.31.63 | leader | `02-URA5CM25-MJJRUN77-AM2V36PJ` |
+| 172.20.31.65 | 节点   | `02-VU2NQAJV-TKM27GBC-ZVE6Y2ZF` |
+| 172.20.31.70 | 节点   | `02-YB2NG77V-4EFDQT6U-5PTDH7AA` |
 
 聚合机器码（leader `show system info` 返回，可整串提交厂商）：
 
 ```
-02-URA5CM25-MJJRUN77-A3AR5KCQ,02-VU2NQAJV-TKM27GBC-OTQ54OCJ,02-YB2NG77V-4EFDQT6U-6FWRWNH7
+02-URA5CM25-MJJRUN77-AM2V36PJ,02-VU2NQAJV-TKM27GBC-ZVE6Y2ZF,02-YB2NG77V-4EFDQT6U-5PTDH7AA
 ```
 
 - 安装目录：`/data/iotdb-test/timechodb-2.0.10.1-bin-rc1-colony`；启动需先
-  `export JAVA_HOME=/data/iotdb-test/tool/jdk/jdk-17.0.15`。
-- 激活/启动顺序：**先激活 63 leader，再启动 65 / 70 其他节点**；集群读写恢复后方可复跑全量测试。
+  `export JAVA_HOME=/data/iotdb-test/tool/jdk/jdk-17.0.12（.70 节点为 tools/jdk，复数）`。
+- 激活/启动顺序：**先单独启动 63 leader 的 CN+DN → 在 63 激活（此时仅 1 个 ConfigNode，1 个激活码即可）
+  → 再启动 65 / 70 的 CN+DN（加入已激活集群自动跟随，显示 ACTIVATED(W)）**；集群读写恢复后方可复跑全量测试。
+- 注意：全新重建（删 data）后机器码会变，旧激活码失效，须用重建后 `show system info` 的新机器码重新签发。
 - 历史：license 于 **2026-06-06 过期**导致集群只读，需重新激活。
