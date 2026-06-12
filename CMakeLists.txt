@@ -8,6 +8,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+# 代码覆盖率编译选项（按需开启，对齐 cpp-native-api-testcase）
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+# set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage")
+# set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fprofile-arcs -ftest-coverage")
+# DEBUG 选项（按需开启）
+# set(CMAKE_BUILD_TYPE Debug)
+
 # 头文件目录：client/include 下含唯一的 SessionC.h 以及 gtest/
 include_directories(${CMAKE_SOURCE_DIR}/client/include)
 
@@ -29,3 +36,5 @@ if(ENABLE_ASAN AND (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang") AND NOT MSVC)
 endif()
 
 add_subdirectory("test")
+# 示例程序（仅 include SessionC.h 的可运行 C 示例）；默认不参与测试构建，需要时取消下行注释后重新 cmake
+# add_subdirectory("example")

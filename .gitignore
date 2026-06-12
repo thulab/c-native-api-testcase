@@ -6,3 +6,10 @@ client/include/*
 client/lib/*
 !client/include/README.md
 !client/lib/README.md
+
+# 代码覆盖率产物（每次运行生成，不入库；REPORT.md 等项目台账文档保留）
+coverage/
+*.gcda
+*.gcno
+*.gcov
+*.info

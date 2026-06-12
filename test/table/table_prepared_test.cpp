@@ -130,3 +130,72 @@ TEST(TablePrepared, Case81_SetNullAndClear) {
     ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
     closeDestroyTable(s);
 }
+
+/* ============================================================
+ * 预编译语句 - 接口误用场景（新增，关联用例 154-156）
+ * 说明：覆盖真实用户易犯的预编译语句误用，验证 SDK 防御性返回非 TS_OK 且进程不崩溃。
+ *       对应 SessionC.cpp 中此前未被正常路径覆盖的错误分支。
+ * ============================================================ */
+
+// 用例154: 漏绑参数就执行 —— 创建带占位符的语句，未绑定全部参数即 execute，应返回非 TS_OK（"not bound"）
+TEST(TablePrepared, Case154_ExecuteWithUnboundParam) {
+    CTableSession* s = newOpenTableSession();
+    ASSERT_NE(s, nullptr);
+    prepareTypedTable(s);
+    int pc = 0;
+    CTablePreparedStmt* ps = ts_table_prepared_statement_new(
+        s, "SELECT i64 FROM tps WHERE tag1 = ? AND i32 = ?", "c_ps_unbound", &pc);
+    if (!ps && preparedUnsupported(ts_get_last_error())) {
+        ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
+        closeDestroyTable(s);
+        GTEST_SKIP() << "服务端未暴露 prepareStatement RPC";
+    }
+    ASSERT_NE(ps, nullptr) << ts_get_last_error();
+    EXPECT_EQ(pc, 2);
+    // 只绑定第 0 个参数，第 1 个故意不绑定
+    EXPECT_EQ(ts_table_prepared_statement_set_string(ps, 0, "dev1"), TS_OK);
+    CSessionDataSet* ds = nullptr;
+    // 期望：execute 拦截未绑定参数，返回非 TS_OK，且 ds 不被赋值
+    EXPECT_NE(ts_table_prepared_statement_execute_query(ps, -1, &ds), TS_OK);
+    EXPECT_EQ(ds, nullptr);
+    if (ds) ts_dataset_destroy(ds);
+    ts_table_prepared_statement_free(ps);
+    ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
+    closeDestroyTable(s);
+}
+
+// 用例155: set_string 绑定空指针 —— 绑定字符串参数时传 NULL，应返回非 TS_OK（"value is null"）
+TEST(TablePrepared, Case155_SetStringNullValue) {
+    CTableSession* s = newOpenTableSession();
+    ASSERT_NE(s, nullptr);
+    prepareTypedTable(s);
+    int pc = 0;
+    CTablePreparedStmt* ps = ts_table_prepared_statement_new(
+        s, "SELECT s FROM tps WHERE tag1 = ?", "c_ps_nullstr", &pc);
+    if (!ps && preparedUnsupported(ts_get_last_error())) {
+        ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
+        closeDestroyTable(s);
+        GTEST_SKIP() << "服务端未暴露 prepareStatement RPC";
+    }
+    ASSERT_NE(ps, nullptr) << ts_get_last_error();
+    EXPECT_EQ(pc, 1);
+    // 索引合法但 value 为 NULL，应被拦截
+    EXPECT_NE(ts_table_prepared_statement_set_string(ps, 0, nullptr), TS_OK);
+    ts_table_prepared_statement_free(ps);
+    ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
+    closeDestroyTable(s);
+}
+
+// 用例156: 创建预编译语句时 out_param_count 传 NULL —— 应返回 nullptr（防御非法输出参数）
+TEST(TablePrepared, Case156_NewNullOutParamCount) {
+    CTableSession* s = newOpenTableSession();
+    ASSERT_NE(s, nullptr);
+    prepareTypedTable(s);
+    // out_param_count 传 nullptr，应被防御性拦截返回 nullptr
+    CTablePreparedStmt* ps = ts_table_prepared_statement_new(
+        s, "SELECT i64 FROM tps WHERE tag1 = ?", "c_ps_nullout", nullptr);
+    EXPECT_EQ(ps, nullptr);
+    if (ps) ts_table_prepared_statement_free(ps);
+    ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_ps_db");
+    closeDestroyTable(s);
+}

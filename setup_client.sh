@@ -35,7 +35,13 @@ cp -rf "${GTEST_DIR}/include/gtest" "${ROOT}/client/include/"
 
 # 3) 运行库（导出 ts_* C 符号的 libiotdb_session.so 必须来自含 SessionC 的构建）
 cp -f "${CPP_CLIENT_DIR}/lib/libiotdb_session.so" "${ROOT}/client/lib/"
-cp -f "${CPP_CLIENT_DIR}/lib/libthrift.a"        "${ROOT}/client/lib/"
+# libthrift.a：#17801 重构后 thrift 已内嵌进 .so，新产物不再单独生成；存在才拷贝，避免脚本中断
+if [ -f "${CPP_CLIENT_DIR}/lib/libthrift.a" ]; then
+    cp -f "${CPP_CLIENT_DIR}/lib/libthrift.a" "${ROOT}/client/lib/"
+    echo "已拷贝 libthrift.a（旧产物，链接不再依赖）"
+else
+    echo "未发现 libthrift.a（thrift 已内嵌 libiotdb_session.so，无需外链）"
+fi
 
 # 4) gtest 静态库
 cp -f "${GTEST_DIR}/lib/libgtest.a" "${ROOT}/client/lib/"

@@ -17,8 +17,12 @@
 ```txt
 ├── client                      // 头文件和库文件目录（由 setup_client.sh 填充）
 │   ├── include                 // SessionC.h + gtest/
-│   └── lib                     // libiotdb_session.so / libthrift.a / libgtest.a
+│   └── lib                     // libiotdb_session.so（含 ts_* 与内嵌 thrift）/ libgtest.a
 ├── data                        // 预留测试数据目录
+├── example                     // C 示例程序（仅 include SessionC.h，默认不参与测试构建）
+│   ├── tree_example.c          // 树模型示例：建序列→写入→查询→清理
+│   ├── table_example.c         // 表模型示例：建库/表→Tablet 写入→预编译/查询→清理
+│   └── CMakeLists.txt          // 示例编译配置
 ├── test                        // 测试代码目录
 │   ├── common                  // 公共头文件与公共用例
 │   │   ├── c_test_common.h     // 连接参数与会话/查询辅助函数
@@ -40,8 +44,9 @@
 ├── CMakeLists.txt              // 主配置
 ├── setup_client.sh            // 拷贝头文件/库文件到 client/
 ├── compile.sh                  // 编译脚本
-├── run.sh                      // 执行脚本
-└── README.md
+├── run.sh                      // 执行脚本（-m test / -m example）
+├── README.md
+└── REPORT.md                   // 每轮测试结果汇总与缺陷记录
 ```
 
 ### 2、项目内容
@@ -75,8 +80,11 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 # 库文件位于：iotdb-client/client-cpp/target/client-cpp-*-SNAPSHOT-cpp-linux-x86_64/lib
 ```
 
-将 `SessionC.h`、`gtest/` 放入 `client/include`；将 `libiotdb_session.so`、`libthrift.a`、
-`libgtest.a` 放入 `client/lib`。可直接执行脚本自动完成（路径可用环境变量覆盖）：
+将 `SessionC.h`、`gtest/` 放入 `client/include`；将 `libiotdb_session.so`、`libgtest.a` 放入
+`client/lib`。可直接执行脚本自动完成（路径可用环境变量覆盖）：
+
+> 注：#17801 重构后 thrift 已内嵌进 `libiotdb_session.so`，新构建产物不再单独生成 `libthrift.a`，
+> 链接与运行均不再依赖它（`setup_client.sh` 对其改为存在才拷贝；对齐 cpp-native-api-testcase 0020e3b）。
 
 ```bash
 ./setup_client.sh
@@ -99,7 +107,9 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 # 执行（生成 build/test/c_session_test_report.json）
 ./run.sh
 # 只跑部分用例（gtest 过滤器）
-./run.sh --gtest_filter='TreeInsert.*'
+./run.sh -m test --gtest_filter='TreeInsert.*'
+# 跑 C 示例程序（需先在根 CMakeLists.txt 取消 add_subdirectory("example") 注释并重新编译）
+./run.sh -m example
 ```
 
 ## 三、用例与需求对应
@@ -130,3 +140,25 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
    - 若失败原因是**测试代码自身问题**：直接**修改测试代码**修复，使其正确反映需求。
 3. **测试报告**：每轮测试结束后的结果汇总（通过/失败/跳过统计、失败明细、结论）统一写入
    `REPORT.md`。原始 gtest JSON 报告位于 `build/test/c_session_test_report.json`。
+
+## 五、集群环境与激活信息
+
+测试运行于 TimechoDB 集群（colony 配置）。机器码用于厂商签发激活码，可通过 leader 上
+`show system info` 或各节点 `activation/system_info` 文件获取：
+
+| 节点 | 角色 | 机器码（SystemInfo） |
+|---|---|---|
+| 172.20.31.63 | leader | `02-URA5CM25-MJJRUN77-A3AR5KCQ` |
+| 172.20.31.65 | 节点   | `02-VU2NQAJV-TKM27GBC-OTQ54OCJ` |
+| 172.20.31.70 | 节点   | `02-YB2NG77V-4EFDQT6U-6FWRWNH7` |
+
+聚合机器码（leader `show system info` 返回，可整串提交厂商）：
+
+```
+02-URA5CM25-MJJRUN77-A3AR5KCQ,02-VU2NQAJV-TKM27GBC-OTQ54OCJ,02-YB2NG77V-4EFDQT6U-6FWRWNH7
+```
+
+- 安装目录：`/data/iotdb-test/timechodb-2.0.10.1-bin-rc1-colony`；启动需先
+  `export JAVA_HOME=/data/iotdb-test/tool/jdk/jdk-17.0.15`。
+- 激活/启动顺序：**先激活 63 leader，再启动 65 / 70 其他节点**；集群读写恢复后方可复跑全量测试。
+- 历史：license 于 **2026-06-06 过期**导致集群只读，需重新激活。
