@@ -11,6 +11,7 @@ add_executable(main
     # 表模型
     ${CMAKE_SOURCE_DIR}/test/table/table_lifecycle_test.cpp
     ${CMAKE_SOURCE_DIR}/test/table/table_write_query_test.cpp
+    ${CMAKE_SOURCE_DIR}/test/table/table_query_nonexistent_test.cpp
     ${CMAKE_SOURCE_DIR}/test/table/table_prepared_test.cpp
     # 公共：错误处理/资源/稳定性
     ${CMAKE_SOURCE_DIR}/test/common/error_resource_test.cpp
