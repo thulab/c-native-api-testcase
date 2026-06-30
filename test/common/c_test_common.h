@@ -21,7 +21,7 @@ namespace ctest {
 static const char* kHost = "127.0.0.1";
 static const int   kPort = 6667;
 static const char* kUser = "root";
-static const char* kPass = "TimechoDB@2021";
+static const char* kPass = "root";
 
 static const char* kWrongPass = "wrong_password_for_test";
 static const char* kWrongUser = "no_such_user_for_test";
