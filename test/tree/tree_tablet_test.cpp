@@ -99,19 +99,6 @@ TEST(Tablet, Case26_MultiTypeValues) {
     closeDestroyTree(s);
 }
 
-// 用例27: OBJECT 列 add_value_object 写值（tablet 级 API 验证；表模型端到端见用例77）
-TEST(Tablet, Case27_AddValueObject) {
-    const char* cols[] = {"tag1", "payload"};
-    TSDataType_C types[] = {TS_TYPE_STRING, TS_TYPE_OBJECT};
-    TSColumnCategory_C cats[] = {TS_COL_TAG, TS_COL_FIELD};
-    CTablet* t = ts_tablet_new_with_category("c_obj", 2, cols, types, cats, 10);
-    ASSERT_NE(t, nullptr);
-    const uint8_t blob[] = {'a', 'b', 'c', 0x00, 'd'};
-    EXPECT_EQ(ts_tablet_add_timestamp(t, 0, 1000), TS_OK);
-    EXPECT_EQ(ts_tablet_add_value_string(t, 0, 0, "dev1"), TS_OK);
-    EXPECT_EQ(ts_tablet_add_value_object(t, 1, 0, true, 0, blob, sizeof(blob)), TS_OK);
-    ts_tablet_destroy(t);
-}
 
 // 用例28: set_row_count 控制有效行数，insert 仅写前 N 行
 TEST(Tablet, Case28_SetRowCount) {

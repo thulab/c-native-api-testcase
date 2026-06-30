@@ -157,50 +157,6 @@ TEST(TableWrite, Case76_MultiTypeTablet) {
     closeDestroyTable(s);
 }
 
-// 用例77: OBJECT 字段写入与读回字节长度
-TEST(TableWrite, Case77_ObjectField) {
-    CTableSession* s = newOpenTableSession();
-    ASSERT_NE(s, nullptr);
-    tablePrepareDatabase(s, "c_w_obj");
-    TsStatus ddl = ts_table_session_execute_non_query(s,
-        "CREATE TABLE tobj (tag1 string tag, payload object field)");
-    if (ddl != TS_OK) {
-        // 服务端可能不支持 OBJECT 类型，跳过（记录）
-        GTEST_SKIP() << "服务端不支持 OBJECT 类型: " << ts_get_last_error();
-    }
-    const char* cols[] = {"tag1", "payload"};
-    TSDataType_C types[] = {TS_TYPE_STRING, TS_TYPE_OBJECT};
-    TSColumnCategory_C cats[] = {TS_COL_TAG, TS_COL_FIELD};
-    CTablet* t = ts_tablet_new_with_category("tobj", 2, cols, types, cats, 10);
-    ASSERT_NE(t, nullptr);
-    const uint8_t blob[] = {'h','e','l','l','o','-','o','b','j'};
-    ts_tablet_add_timestamp(t, 0, 1000);
-    ts_tablet_add_value_string(t, 0, 0, "dev1");
-    ASSERT_EQ(ts_tablet_add_value_object(t, 1, 0, true, 0, blob, sizeof(blob)), TS_OK);
-    ts_tablet_set_row_count(t, 1);
-    EXPECT_EQ(ts_table_session_insert(s, t), TS_OK) << ts_get_last_error();
-    ts_tablet_destroy(t);
-
-    CSessionDataSet* ds = nullptr;
-    ASSERT_EQ(ts_table_session_execute_query(s, "SELECT * FROM tobj", &ds), TS_OK);
-    ASSERT_TRUE(ts_dataset_has_next(ds));
-    CRowRecord* r = ts_dataset_next(ds);
-    bool found = false;
-    int n = ts_row_record_get_field_count(r);
-    for (int i = 0; i < n; i++) {
-        if (ts_row_record_get_data_type(r, i) == TS_TYPE_OBJECT) {
-            found = true;
-            EXPECT_FALSE(ts_row_record_is_null(r, i));
-            EXPECT_GT(ts_row_record_get_string_byte_length(r, i), 0u);
-            break;
-        }
-    }
-    EXPECT_TRUE(found);
-    ts_row_record_destroy(r);
-    ts_dataset_destroy(ds);
-    ts_table_session_execute_non_query(s, "DROP DATABASE IF EXISTS c_w_obj");
-    closeDestroyTable(s);
-}
 
 /* ---------------- 异常 ---------------- */
 

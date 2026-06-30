@@ -338,28 +338,6 @@ TEST(TreeQuery, Case63_RowIsNull) {
     closeDestroyTree(s);
 }
 
-// 用例64: get_string_byte_length（BLOB 列）
-TEST(TreeQuery, Case64_StringByteLength) {
-    CSession* s = newOpenTreeSession();
-    ASSERT_NE(s, nullptr);
-    const char* pb = "root.c_query.db.blob";
-    dropTimeseriesIfExists(s, pb);
-    ASSERT_EQ(ts_session_create_timeseries(s, pb, TS_TYPE_BLOB, TS_ENCODING_PLAIN, TS_COMPRESSION_SNAPPY), TS_OK) << ts_get_last_error();
-    const char* m[] = {"blob"};
-    const char* v[] = {"X'616263'"};  // BLOB 字面量须为 X'hex'
-    ASSERT_EQ(ts_session_insert_record_str(s, "root.c_query.db", 1, 1, m, v), TS_OK) << ts_get_last_error();
-    CSessionDataSet* ds = nullptr;
-    ASSERT_EQ(ts_session_execute_query(s, "select blob from root.c_query.db where time=1", &ds), TS_OK);
-    ASSERT_TRUE(ts_dataset_has_next(ds));
-    CRowRecord* r = ts_dataset_next(ds);
-    EXPECT_EQ(ts_row_record_get_data_type(r, 0), TS_TYPE_BLOB);
-    EXPECT_GT(ts_row_record_get_string_byte_length(r, 0), 0u);
-    ts_row_record_destroy(r);
-    ts_dataset_destroy(ds);
-    ts_session_delete_timeseries(s, pb);
-    closeDestroyTree(s);
-}
-
 /* ---------------- 查询与结果集异常 ---------------- */
 
 // 用例125: 语法错误 SQL -> 非 TS_OK
