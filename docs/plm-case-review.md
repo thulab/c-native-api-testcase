@@ -236,4 +236,5 @@
 - 76 本地 TimechoDB（127.0.0.1:6667）：树模型 `TreeLifecycle.Case01_NewSingleNode`、表模型 `TableWrite.Case73_SelectAll` 单条执行 PASSED，JUnit XML 与 `case_id` 注入正常。
 - 76 本地 TimechoDB 全量：**146 tests ran（18.5s），143 passed + 3 skipped**（30/122/147 的 `GTEST_SKIP`），RC=0。
 - K8s spike：连接 `native-java-20261102`（192.168.99.51:30295）被重定向到 `timechodb-datanode-0...svc.cluster.local:6667`，`getaddrinfo` 失败（TSocket -99）；据此采用执行机本地 TimechoDB 的接入方式。
+- PLM run 815（2026-11-05 19:15）：**SUCCESS，146 total / 143 passed / 3 skipped / 0 failed/error**，约 87 秒；`k8sInstanceId` 与 `nativeK8sTemplateId` 均为 null，确认未创建 K8s 实例、未注入 `IOTDB_HOST/PORT`。跳过 3 条为 `TimechoDB-3266 / 3272 / 3341`（30/122/147 的 `GTEST_SKIP`），导入编号 `TimechoDB-3217 ~ 3362`。
 - 执行机前提：C 执行机需有本地 TimechoDB（76 已有 2.0.12.1 常驻实例）；PLM 的 C 用例不使用 Harbor Tag/模板实例。
