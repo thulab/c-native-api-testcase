@@ -8,7 +8,8 @@
 #
 # 数据库连接通过环境变量覆盖（不设置时使用默认值）：
 #   IOTDB_HOST / IOTDB_PORT / IOTDB_USER / IOTDB_PASSWORD
-# PLM 执行时必须提供 IOTDB_HOST/IOTDB_PORT（K8s 实例返回的连接地址）。
+# PLM 的 session-c 不注入 IOTDB_HOST/IOTDB_PORT，默认连执行机本地 127.0.0.1:6667；
+# 手工运行或需要其他地址时，设置上述环境变量即可。
 # ============================================================================
 set -u
 
@@ -49,23 +50,15 @@ prepare() {
     return 0
 }
 
-require_plm_iotdb_endpoint() {
-    if [ -n "${PLM_AUTOMATION_TYPE:-}" ]; then
-        if [ -z "${IOTDB_HOST:-}" ] || [ -z "${IOTDB_PORT:-}" ]; then
-            echo "[plm] PLM 执行必须提供 K8s 实例连接地址 IOTDB_HOST/IOTDB_PORT" >&2
-            return 2
-        fi
-    fi
-    return 0
-}
-
+# C 测试程序连执行机本地 TimechoDB（默认 127.0.0.1:6667）。
+# PLM 的 session-c 类型不创建 K8s 实例、不注入 IOTDB_HOST/IOTDB_PORT；
+# 如需指定其他地址，设置 IOTDB_HOST / IOTDB_PORT 即可。
 list_cases() {
     "$PYTHON" scripts/plm/plm_cases.py list --automation-type "$AUTOMATION_TYPE"
 }
 
 case_one() {
     [ -z "${1:-}" ] && { usage; return 2; }
-    require_plm_iotdb_endpoint || return 2
     target=$("$PYTHON" scripts/plm/plm_cases.py lookup "$1") || return 5
     [ -x "$BIN" ] || { echo "[plm] 测试程序未编译，请先执行 sh start.sh prepare" >&2; return 1; }
 

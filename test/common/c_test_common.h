@@ -18,10 +18,11 @@
 
 namespace ctest {
 
-/* ---------------- 连接参数（环境变量优先，便于 PLM / K8s 注入） ----------------
+/* ---------------- 连接参数（环境变量优先） ----------------
  *
  * 优先级：IOTDB_HOST / IOTDB_PORT / IOTDB_USER / IOTDB_PASSWORD > 默认值。
- * PLM 执行时会注入 IOTDB_HOST/IOTDB_PORT；账号口令默认使用 TimechoDB 的 root/TimechoDB@2021。
+ * PLM 的 session-c 不注入 IOTDB_HOST/IOTDB_PORT，默认连执行机本地 127.0.0.1:6667；
+ * 手工运行或需要其他地址时设置上述环境变量。账号口令默认 TimechoDB 的 root/TimechoDB@2021。
  * 独立运行（如 111 节点）如需 root/root，设置 IOTDB_USER=root IOTDB_PASSWORD=root 即可。
  */
 inline const char* envOr(const char* name, const char* fallback) {
