@@ -225,12 +225,15 @@
 
 1. **用例总数口径**：`--gtest_list_tests` 为 146；`REPORT.md` 记载需求台账 156、测试函数 154（6&87、79&80、88&153 各合并为一个函数，另 3 条跳过）。本清单按可执行的 146 个 gtest 函数生成，一个函数对应一个 PLM 用例。
 2. **跳过用例**：30、122（Tablet 越界，源码缺陷 #1）与 147（close 后 execute 仍返回 TS_OK，源码缺陷 #2）在代码中 `GTEST_SKIP`。导入后 PLM 会显示为跳过；是否保留由你决定。
-3. **C 的 K8s 重定向风险**：`SessionC.h` 没有关闭重定向的接口，而 C++ 已用 `enableRedirections=false` 规避。计划用一条最简用例连 K8s 实例做 spike；若确实重定向，再决定补 C 客户端能力或调整接入方式。
+3. **C 的 K8s 重定向（已决策）**：`SessionC.h` 没有关闭重定向的接口（上游 apache/iotdb 与 TimechoDB 2.0.12.1 的 SessionC 相同），K8s 实例会把连接重定向到 `*.svc.cluster.local`，执行机无法解析。**接入方式定为：C 测试程序直接连执行机本地 TimechoDB（默认 `127.0.0.1:6667`），PLM 不创建 K8s 实例、不注入 `IOTDB_HOST/PORT`**。若后续要求跑 K8s 实例，需补 C 客户端关闭重定向能力或由基础设施为 DataNode 暴露可达端口。
 4. **默认口令变更**：`c_test_common.h` 的连接参数改为环境变量优先，默认口令从 `root/root` 改为 PLM 环境的 `TimechoDB@2021`。111 上独立运行需设置 `IOTDB_USER=root IOTDB_PASSWORD=root`。
 5. **Tablet 用例归类**：Tablet 相关用例（22-30、101-102、119-124）归入「公共-Tablet」，模型记为「通用」，与 C++ 的功能点口径保持一致。
 6. **合并用例命名**：`Case06_87`、`Case88_153` 这类一个测试函数覆盖两个需求编号的，PLM 里只建一条用例，名称沿用「用例6+87」「用例88/153」的原始注释。
 
 ## 四、验证记录
 
-- 76 执行机：`sh compile.sh` 成功，`./build/test/main --gtest_list_tests` 输出 146 条。
-- 单条执行与 K8s 重定向 spike 结果待补。
+- 76 执行机：`sh start.sh prepare` 成功，`./build/test/main --gtest_list_tests` 输出 146 条。
+- 76 本地 TimechoDB（127.0.0.1:6667）：树模型 `TreeLifecycle.Case01_NewSingleNode`、表模型 `TableWrite.Case73_SelectAll` 单条执行 PASSED，JUnit XML 与 `case_id` 注入正常。
+- 76 本地 TimechoDB 全量：**146 tests ran（18.5s），143 passed + 3 skipped**（30/122/147 的 `GTEST_SKIP`），RC=0。
+- K8s spike：连接 `native-java-20261102`（192.168.99.51:30295）被重定向到 `timechodb-datanode-0...svc.cluster.local:6667`，`getaddrinfo` 失败（TSocket -99）；据此采用执行机本地 TimechoDB 的接入方式。
+- 执行机前提：C 执行机需有本地 TimechoDB（76 已有 2.0.12.1 常驻实例）；PLM 的 C 用例不使用 Harbor Tag/模板实例。
