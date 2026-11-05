@@ -129,7 +129,11 @@ PLM 的 `session-c` 类型不创建 K8s 实例、不注入 `IOTDB_HOST` / `IOTDB
 执行机本地 TimechoDB（`127.0.0.1:6667`）。**执行机必须常驻本地 TimechoDB（root / TimechoDB@2021）**；
 手工运行或需要其他地址时，设置 `IOTDB_HOST` / `IOTDB_PORT`（PLM 派发没有注入入口）。
 `.plm-case-defs.json` 是 146 条用例的导入定义，`.plm-case-id-map.json` 在导入后回填
-PLM 用例 ID 与 gtest target 的映射。
+PLM 用例 ID 与 gtest target 的映射。**回填后的 `.plm-case-id-map.json` 必须提交到绑定分支**，
+否则新执行机 clone 后 `list-cases` 为空、`case` 找不到目标；回填前 PLM 绑定页显示程序侧 0 条属预期。
+
+> **测试副作用**：用例会创建/删除 `root.c_*`、`c_w_db*`、`db_a` 等专属库；执行机本地库上的同名库会被覆盖。
+> 3 条 `GTEST_SKIP`（30/122/147）对应 `REPORT.md` 的源码缺陷跟踪，PLM 中显示 SKIPPED 属预期。
 
 > **为什么 C 不跑 K8s 实例**：PLM 的 K8s 实例会把连接重定向到 `*.svc.cluster.local`，当前 C 客户端
 > （SessionC）没有关闭重定向的接口，执行机无法解析该域名。因此 C 接入 PLM 时直接连执行机本地
