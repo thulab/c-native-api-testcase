@@ -98,8 +98,11 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 
 ## 二、使用
 
-连接参数在 `test/common/c_test_common.h` 顶部（默认 `127.0.0.1:6667`，`root` / `TimechoDB@2021`），
-按实际环境修改。需先启动 IoTDB / TimechoDB 服务。
+连接参数在 `test/common/c_test_common.h` 顶部，**环境变量优先**：
+`IOTDB_HOST` / `IOTDB_PORT` / `IOTDB_USER` / `IOTDB_PASSWORD`。默认 `127.0.0.1:6667`，
+`root` / `TimechoDB@2021`（PLM K8s 实例的默认口令）。需先启动 IoTDB / TimechoDB 服务。
+
+> 111 节点等使用 `root/root` 的环境，独立运行时显式设置 `IOTDB_USER=root IOTDB_PASSWORD=root`。
 
 ```bash
 # 编译
@@ -111,6 +114,24 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 # 跑 C 示例程序（需先在根 CMakeLists.txt 取消 add_subdirectory("example") 注释并重新编译）
 ./run.sh -m example
 ```
+
+### PLM 执行入口
+
+PLM 通过仓库根目录的 `start.sh` 派发单条用例：
+
+```bash
+sh start.sh prepare                 # 编译（需先准备 client/include、client/lib）
+sh start.sh list-cases --json       # 输出用例清单 JSON（导入回填后非空）
+sh start.sh case <CASE_ID>          # 执行单条，产物在 $PLM_REPORT_DIR/case-<ID>.xml
+```
+
+PLM 执行时必须注入 `IOTDB_HOST` / `IOTDB_PORT`；账号口令由测试程序默认值提供。
+`.plm-case-defs.json` 是 146 条用例的导入定义，`.plm-case-id-map.json` 在导入后回填
+PLM 用例 ID 与 gtest target 的映射。
+
+> **K8s 重定向**：PLM 的 K8s 实例会把连接重定向到 `*.svc.cluster.local`，当前 C 客户端
+> 没有关闭重定向的接口（`SessionC.cpp` 直接构造 `Session`，未走支持 `enableRedirections`
+> 的 Builder），执行机无法解析该域名。需补齐 C 客户端能力后才能跑 K8s 实例。
 
 ## 三、用例与需求对应
 
