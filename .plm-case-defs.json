@@ -19,7 +19,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3217",
+      "plmId": 7788
     },
     {
       "target": "TreeLifecycle.Case02_NewWithZone",
@@ -32,7 +34,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3218",
+      "plmId": 7789
     },
     {
       "target": "TreeLifecycle.Case03_NewMultiNode",
@@ -45,7 +49,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3219",
+      "plmId": 7790
     },
     {
       "target": "TreeLifecycle.Case04_Open",
@@ -58,7 +64,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3220",
+      "plmId": 7791
     },
     {
       "target": "TreeLifecycle.Case05_OpenWithCompression",
@@ -71,7 +79,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3221",
+      "plmId": 7792
     },
     {
       "target": "TreeLifecycle.Case06_87_CloseThenDestroy",
@@ -84,7 +94,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3222",
+      "plmId": 7793
     },
     {
       "target": "TreeLifecycle.Case08_GetTimezone",
@@ -97,7 +109,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3223",
+      "plmId": 7794
     },
     {
       "target": "TreeLifecycle.Case09_SetTimezone",
@@ -110,7 +124,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3224",
+      "plmId": 7795
     },
     {
       "target": "TreeLifecycle.Case10_GetTimezoneBufferTooSmall",
@@ -123,7 +139,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3225",
+      "plmId": 7796
     },
     {
       "target": "TreeLifecycle.Case89_RepeatedLifecycle",
@@ -136,7 +154,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3226",
+      "plmId": 7797
     },
     {
       "target": "TreeLifecycleError.Case07_WrongPassword",
@@ -149,7 +169,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3227",
+      "plmId": 7798
     },
     {
       "target": "TreeLifecycleError.Case90_ConnectionRefused",
@@ -162,7 +184,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3228",
+      "plmId": 7799
     },
     {
       "target": "TreeLifecycleError.Case91_WrongUser",
@@ -175,7 +199,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3229",
+      "plmId": 7800
     },
     {
       "target": "TreeLifecycleError.Case92_DoubleOpen",
@@ -188,7 +214,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3230",
+      "plmId": 7801
     },
     {
       "target": "TreeLifecycleError.Case93_OpenNull",
@@ -201,7 +229,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3231",
+      "plmId": 7802
     },
     {
       "target": "TreeLifecycleError.Case94_IllegalZone",
@@ -214,7 +244,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3232",
+      "plmId": 7803
     },
     {
       "target": "TreeLifecycleError.Case95_SetIllegalZone",
@@ -227,7 +259,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3233",
+      "plmId": 7804
     },
     {
       "target": "TreeLifecycleError.Case96_CloseWithoutOpen",
@@ -240,7 +274,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3234",
+      "plmId": 7805
     },
     {
       "target": "TreeLifecycleError.Case97_DoubleClose",
@@ -253,7 +289,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3235",
+      "plmId": 7806
     },
     {
       "target": "TreeLifecycleError.Case98_DestroyWhileOpen",
@@ -266,7 +304,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3236",
+      "plmId": 7807
     },
     {
       "target": "TreeLifecycleError.Case99_DestroyNull",
@@ -279,7 +319,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3237",
+      "plmId": 7808
     },
     {
       "target": "TreeLifecycleError.Case100_UseAfterFreeDefense",
@@ -292,7 +334,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3238",
+      "plmId": 7809
     },
     {
       "target": "TreeSchema.Case11_CreateDatabase",
@@ -305,7 +349,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3239",
+      "plmId": 7810
     },
     {
       "target": "TreeSchema.Case12_DeleteDatabase",
@@ -318,7 +364,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3240",
+      "plmId": 7811
     },
     {
       "target": "TreeSchema.Case13_DeleteDatabases",
@@ -331,7 +379,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3241",
+      "plmId": 7812
     },
     {
       "target": "TreeSchema.Case14_CreateTimeseries",
@@ -344,7 +394,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3242",
+      "plmId": 7813
     },
     {
       "target": "TreeSchema.Case15_CreateTimeseriesEx",
@@ -357,7 +409,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3243",
+      "plmId": 7814
     },
     {
       "target": "TreeSchema.Case16_CreateMultiTimeseries",
@@ -370,7 +424,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3244",
+      "plmId": 7815
     },
     {
       "target": "TreeSchema.Case17_CreateAlignedTimeseries",
@@ -383,7 +439,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3245",
+      "plmId": 7816
     },
     {
       "target": "TreeSchema.Case18_CheckExistsTrue",
@@ -396,7 +454,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3246",
+      "plmId": 7817
     },
     {
       "target": "TreeSchema.Case19_CheckExistsFalse",
@@ -409,7 +469,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3247",
+      "plmId": 7818
     },
     {
       "target": "TreeSchema.Case20_DeleteTimeseries",
@@ -422,7 +484,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3248",
+      "plmId": 7819
     },
     {
       "target": "TreeSchema.Case21_DeleteTimeseriesBatch",
@@ -435,7 +499,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3249",
+      "plmId": 7820
     },
     {
       "target": "TreeSchemaError.Case103_CreateDuplicateDatabase",
@@ -448,7 +514,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3250",
+      "plmId": 7821
     },
     {
       "target": "TreeSchemaError.Case104_DeleteNonexistDatabase",
@@ -461,7 +529,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3251",
+      "plmId": 7822
     },
     {
       "target": "TreeSchemaError.Case105_DeleteDatabasesCountMismatch",
@@ -474,7 +544,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3252",
+      "plmId": 7823
     },
     {
       "target": "TreeSchemaError.Case106_CreateDuplicateTimeseries",
@@ -487,7 +559,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3253",
+      "plmId": 7824
     },
     {
       "target": "TreeSchemaError.Case107_IllegalPath",
@@ -500,7 +574,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3254",
+      "plmId": 7825
     },
     {
       "target": "TreeSchemaError.Case108_IncompatibleTypeEncoding",
@@ -513,7 +589,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3255",
+      "plmId": 7826
     },
     {
       "target": "TreeSchemaError.Case109_AlignedCountMismatch",
@@ -526,7 +604,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3256",
+      "plmId": 7827
     },
     {
       "target": "TreeSchemaError.Case110_CheckExistsNullOut",
@@ -539,7 +619,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3257",
+      "plmId": 7828
     },
     {
       "target": "TreeSchemaError.Case111_DeleteNonexistTimeseries",
@@ -552,7 +634,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-Schema"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3258",
+      "plmId": 7829
     },
     {
       "target": "Tablet.Case22_New",
@@ -565,7 +649,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3259",
+      "plmId": 7830
     },
     {
       "target": "Tablet.Case23_NewWithCategory",
@@ -578,7 +664,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3260",
+      "plmId": 7831
     },
     {
       "target": "Tablet.Case24_InitialRowCount",
@@ -591,7 +679,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3261",
+      "plmId": 7832
     },
     {
       "target": "Tablet.Case25_AddTimestampAndInt64",
@@ -604,7 +694,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3262",
+      "plmId": 7833
     },
     {
       "target": "Tablet.Case26_MultiTypeValues",
@@ -617,7 +709,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3263",
+      "plmId": 7834
     },
     {
       "target": "Tablet.Case28_SetRowCount",
@@ -630,7 +724,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3264",
+      "plmId": 7835
     },
     {
       "target": "Tablet.Case29_Reset",
@@ -643,7 +739,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3265",
+      "plmId": 7836
     },
     {
       "target": "TabletError.Case30_IndexOutOfRange",
@@ -656,7 +754,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3266",
+      "plmId": 7837
     },
     {
       "target": "TabletError.Case101_DoubleDestroy",
@@ -669,7 +769,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3267",
+      "plmId": 7838
     },
     {
       "target": "Tablet.Case102_ReuseAfterInsert",
@@ -682,7 +784,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3268",
+      "plmId": 7839
     },
     {
       "target": "TabletError.Case119_ZeroColumns",
@@ -695,7 +799,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3269",
+      "plmId": 7840
     },
     {
       "target": "TabletError.Case120_CountArrayConsistency",
@@ -708,7 +814,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3270",
+      "plmId": 7841
     },
     {
       "target": "TabletError.Case121_SetRowCountOverMax",
@@ -721,7 +829,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3271",
+      "plmId": 7842
     },
     {
       "target": "TabletError.Case122_AddTimestampRowOutOfRange",
@@ -734,7 +844,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3272",
+      "plmId": 7843
     },
     {
       "target": "TabletError.Case123_TypeMismatchSetter",
@@ -747,7 +859,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3273",
+      "plmId": 7844
     },
     {
       "target": "TabletError.Case124_AddValueNullTablet",
@@ -760,7 +874,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-Tablet"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3274",
+      "plmId": 7845
     },
     {
       "target": "TreeInsert.Case31_InsertRecordStr",
@@ -773,7 +889,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3275",
+      "plmId": 7846
     },
     {
       "target": "TreeInsert.Case32_InsertRecordTyped",
@@ -786,7 +904,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3276",
+      "plmId": 7847
     },
     {
       "target": "TreeInsert.Case33_InsertRecordNewTypes",
@@ -799,7 +919,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3277",
+      "plmId": 7848
     },
     {
       "target": "TreeInsert.Case34_InsertRecordsStr",
@@ -812,7 +934,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3278",
+      "plmId": 7849
     },
     {
       "target": "TreeInsert.Case35_InsertRecordsTyped",
@@ -825,7 +949,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3279",
+      "plmId": 7850
     },
     {
       "target": "TreeInsert.Case36_InsertRecordsOfOneDevice",
@@ -838,7 +964,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3280",
+      "plmId": 7851
     },
     {
       "target": "TreeInsert.Case37_AlignedRecordStr",
@@ -851,7 +979,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3281",
+      "plmId": 7852
     },
     {
       "target": "TreeInsert.Case38_AlignedRecordTyped",
@@ -864,7 +994,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3282",
+      "plmId": 7853
     },
     {
       "target": "TreeInsert.Case39_AlignedRecordsStr",
@@ -877,7 +1009,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3283",
+      "plmId": 7854
     },
     {
       "target": "TreeInsert.Case40_AlignedRecordsTyped",
@@ -890,7 +1024,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3284",
+      "plmId": 7855
     },
     {
       "target": "TreeInsert.Case41_AlignedRecordsOfOneDevice",
@@ -903,7 +1039,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3285",
+      "plmId": 7856
     },
     {
       "target": "TreeInsert.Case42_InsertTablet",
@@ -916,7 +1054,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3286",
+      "plmId": 7857
     },
     {
       "target": "TreeInsert.Case43_InsertTablets",
@@ -929,7 +1069,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3287",
+      "plmId": 7858
     },
     {
       "target": "TreeInsert.Case44_AlignedTablet",
@@ -942,7 +1084,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3288",
+      "plmId": 7859
     },
     {
       "target": "TreeInsert.Case45_AlignedTablets",
@@ -955,7 +1099,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3289",
+      "plmId": 7860
     },
     {
       "target": "TreeInsert.Case46_AlignedWriteToNonAligned",
@@ -968,7 +1114,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3290",
+      "plmId": 7861
     },
     {
       "target": "TreeInsert.Case47_NonAlignedWriteToAligned",
@@ -981,7 +1129,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3291",
+      "plmId": 7862
     },
     {
       "target": "TreeInsertError.Case112_RecordStrCountMismatch",
@@ -994,7 +1144,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3292",
+      "plmId": 7863
     },
     {
       "target": "TreeInsertError.Case113_RecordTypeMismatch",
@@ -1007,7 +1159,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3293",
+      "plmId": 7864
     },
     {
       "target": "TreeInsertError.Case114_RecordStrNullSession",
@@ -1020,7 +1174,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3294",
+      "plmId": 7865
     },
     {
       "target": "TreeInsertError.Case115_EmptyMeasurements",
@@ -1033,7 +1189,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3295",
+      "plmId": 7866
     },
     {
       "target": "TreeInsertError.Case116_InsertTabletNoRowCount",
@@ -1046,7 +1204,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3296",
+      "plmId": 7867
     },
     {
       "target": "TreeInsertError.Case117_TabletColumnTypeMismatch",
@@ -1059,7 +1219,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3297",
+      "plmId": 7868
     },
     {
       "target": "TreeInsertError.Case118_InsertTabletsCountMismatch",
@@ -1072,7 +1234,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-写入"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3298",
+      "plmId": 7869
     },
     {
       "target": "TreeQuery.Case48_ExecuteQuery",
@@ -1085,7 +1249,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3299",
+      "plmId": 7870
     },
     {
       "target": "TreeQuery.Case49_QueryWithTimeout",
@@ -1098,7 +1264,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3300",
+      "plmId": 7871
     },
     {
       "target": "TreeQuery.Case50_ExecuteNonQuery",
@@ -1111,7 +1279,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3301",
+      "plmId": 7872
     },
     {
       "target": "TreeQuery.Case51_RawDataQuery",
@@ -1124,7 +1294,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3302",
+      "plmId": 7873
     },
     {
       "target": "TreeQuery.Case52_RawDataQueryNegativeTime",
@@ -1137,7 +1309,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3303",
+      "plmId": 7874
     },
     {
       "target": "TreeQuery.Case53_RawDataQueryWithNull",
@@ -1150,7 +1324,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3304",
+      "plmId": 7875
     },
     {
       "target": "TreeQuery.Case54_LastDataQuery",
@@ -1163,7 +1339,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3305",
+      "plmId": 7876
     },
     {
       "target": "TreeQuery.Case55_LastDataQueryWithTime",
@@ -1176,7 +1354,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3306",
+      "plmId": 7877
     },
     {
       "target": "TreeQuery.Case56_LastDataQueryFutureEmpty",
@@ -1189,7 +1369,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3307",
+      "plmId": 7878
     },
     {
       "target": "TreeQuery.Case57_ColumnCount",
@@ -1202,7 +1384,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3308",
+      "plmId": 7879
     },
     {
       "target": "TreeQuery.Case58_ColumnNameType",
@@ -1215,7 +1399,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3309",
+      "plmId": 7880
     },
     {
       "target": "TreeQuery.Case59_SetFetchSize",
@@ -1228,7 +1414,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3310",
+      "plmId": 7881
     },
     {
       "target": "TreeQuery.Case60_RowTimestampFieldCount",
@@ -1241,7 +1429,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3311",
+      "plmId": 7882
     },
     {
       "target": "TreeQuery.Case61_RowTypedGetters",
@@ -1254,7 +1444,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3312",
+      "plmId": 7883
     },
     {
       "target": "TreeQuery.Case62_RowDataType",
@@ -1267,7 +1459,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3313",
+      "plmId": 7884
     },
     {
       "target": "TreeQuery.Case63_RowIsNull",
@@ -1280,7 +1474,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3314",
+      "plmId": 7885
     },
     {
       "target": "TreeQueryError.Case125_SyntaxError",
@@ -1293,7 +1489,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3315",
+      "plmId": 7886
     },
     {
       "target": "TreeQueryError.Case126_EmptyResult",
@@ -1306,7 +1504,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3316",
+      "plmId": 7887
     },
     {
       "target": "TreeQueryError.Case127_QueryNullOut",
@@ -1319,7 +1519,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3317",
+      "plmId": 7888
     },
     {
       "target": "TreeQueryError.Case128_NonQueryIllegal",
@@ -1332,7 +1534,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3318",
+      "plmId": 7889
     },
     {
       "target": "TreeQueryError.Case129_RawDataQueryZeroPaths",
@@ -1345,7 +1549,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3319",
+      "plmId": 7890
     },
     {
       "target": "TreeQueryError.Case130_RawDataQueryReversedTime",
@@ -1358,7 +1564,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3320",
+      "plmId": 7891
     },
     {
       "target": "TreeQueryError.Case131_LastDataQueryNonexist",
@@ -1371,7 +1579,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3321",
+      "plmId": 7892
     },
     {
       "target": "TreeQueryError.Case132_ColumnNameOutOfRange",
@@ -1384,7 +1594,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3322",
+      "plmId": 7893
     },
     {
       "target": "TreeQueryError.Case133_ColumnTypeOutOfRange",
@@ -1397,7 +1609,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3323",
+      "plmId": 7894
     },
     {
       "target": "TreeQueryError.Case134_NextAfterExhausted",
@@ -1410,7 +1624,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3324",
+      "plmId": 7895
     },
     {
       "target": "TreeQueryError.Case135_DatasetUseAfterFreeDefense",
@@ -1423,7 +1639,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3325",
+      "plmId": 7896
     },
     {
       "target": "TreeQueryError.Case136_DataTypeOutOfRange",
@@ -1436,7 +1654,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3326",
+      "plmId": 7897
     },
     {
       "target": "TreeQueryError.Case137_GetterTypeMismatch",
@@ -1449,7 +1669,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3327",
+      "plmId": 7898
     },
     {
       "target": "TreeQueryError.Case138_IsNullOutOfRange",
@@ -1462,7 +1684,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3328",
+      "plmId": 7899
     },
     {
       "target": "TreeQueryError.Case139_FetchSizeNonPositive",
@@ -1475,7 +1699,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3329",
+      "plmId": 7900
     },
     {
       "target": "TreeDelete.Case65_DeleteData",
@@ -1488,7 +1714,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-删除"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3330",
+      "plmId": 7901
     },
     {
       "target": "TreeDelete.Case66_DeleteDataBatch",
@@ -1501,7 +1729,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-删除"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3331",
+      "plmId": 7902
     },
     {
       "target": "TreeDelete.Case67_DeleteDataRange",
@@ -1514,7 +1744,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-删除"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3332",
+      "plmId": 7903
     },
     {
       "target": "TreeDeleteError.Case140_RangeReversed",
@@ -1527,7 +1759,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-删除"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3333",
+      "plmId": 7904
     },
     {
       "target": "TreeDeleteError.Case141_BatchWithNonexist",
@@ -1540,7 +1774,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/树模型-删除"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3334",
+      "plmId": 7905
     },
     {
       "target": "TableLifecycle.Case68_NewEmptyDatabase",
@@ -1553,7 +1789,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3335",
+      "plmId": 7906
     },
     {
       "target": "TableLifecycle.Case69_NewMultiNode",
@@ -1566,7 +1804,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3336",
+      "plmId": 7907
     },
     {
       "target": "TableLifecycle.Case70_OpenCloseDestroy",
@@ -1579,7 +1819,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3337",
+      "plmId": 7908
     },
     {
       "target": "TableLifecycle.Case71_DDL",
@@ -1592,7 +1834,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3338",
+      "plmId": 7909
     },
     {
       "target": "TableLifecycleError.Case142_NullDatabase",
@@ -1605,7 +1849,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3339",
+      "plmId": 7910
     },
     {
       "target": "TableLifecycleError.Case143_ConnectionRefused",
@@ -1618,7 +1864,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3340",
+      "plmId": 7911
     },
     {
       "target": "TableLifecycleError.Case147_ExecuteAfterClose",
@@ -1631,7 +1879,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3341",
+      "plmId": 7912
     },
     {
       "target": "TableLifecycleError.Case148_UseAfterFreeDefense",
@@ -1644,7 +1894,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-生命周期"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3342",
+      "plmId": 7913
     },
     {
       "target": "TableWrite.Case72_InsertCategoryTablet",
@@ -1657,7 +1909,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3343",
+      "plmId": 7914
     },
     {
       "target": "TableWrite.Case73_SelectAll",
@@ -1670,7 +1924,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3344",
+      "plmId": 7915
     },
     {
       "target": "TableWrite.Case74_QueryWithTimeout",
@@ -1683,7 +1939,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3345",
+      "plmId": 7916
     },
     {
       "target": "TableWrite.Case75_DatasetColumnInfo",
@@ -1696,7 +1954,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3346",
+      "plmId": 7917
     },
     {
       "target": "TableWrite.Case76_MultiTypeTablet",
@@ -1709,7 +1969,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3347",
+      "plmId": 7918
     },
     {
       "target": "TableWriteError.Case144_SyntaxError",
@@ -1722,7 +1984,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3348",
+      "plmId": 7919
     },
     {
       "target": "TableWriteError.Case145_InsertNonexistTable",
@@ -1735,7 +1999,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3349",
+      "plmId": 7920
     },
     {
       "target": "TableWriteError.Case146_ColumnCategoryMismatch",
@@ -1748,7 +2014,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-写入与查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3350",
+      "plmId": 7921
     },
     {
       "target": "TableQueryNonexistent.Case_QueryNonexistentTable_ErrorMessageIsSpecific",
@@ -1761,7 +2029,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/表模型-查询"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3351",
+      "plmId": 7922
     },
     {
       "target": "ErrorResource.Case82_LastErrorAfterFailure",
@@ -1774,7 +2044,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3352",
+      "plmId": 7923
     },
     {
       "target": "ErrorResource.Case83_LastErrorPointerLifecycle",
@@ -1787,7 +2059,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3353",
+      "plmId": 7924
     },
     {
       "target": "ErrorResource.Case84_DatasetDestroy",
@@ -1800,7 +2074,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3354",
+      "plmId": 7925
     },
     {
       "target": "ErrorResource.Case85_RowRecordDestroy",
@@ -1813,7 +2089,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3355",
+      "plmId": 7926
     },
     {
       "target": "ErrorResource.Case86_TabletOwnership",
@@ -1826,7 +2104,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3356",
+      "plmId": 7927
     },
     {
       "target": "ErrorResource.Case87_CloseThenDestroy",
@@ -1839,7 +2119,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3357",
+      "plmId": 7928
     },
     {
       "target": "ErrorResource.Case149_LastErrorInitialState",
@@ -1852,7 +2134,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3358",
+      "plmId": 7929
     },
     {
       "target": "ErrorResource.Case150_LastErrorAfterSuccess",
@@ -1865,7 +2149,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3359",
+      "plmId": 7930
     },
     {
       "target": "ErrorResource.Case151_LastErrorThreadLocal",
@@ -1878,7 +2164,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-错误处理与资源"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3360",
+      "plmId": 7931
     },
     {
       "target": "Stability.Case88_153_LargeResultSet",
@@ -1891,7 +2179,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-稳定性"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3361",
+      "plmId": 7932
     },
     {
       "target": "Stability.Case152_ConcurrentSessions",
@@ -1904,7 +2194,9 @@
       "executeMethod": "自动",
       "featurePaths": [
         "接口模块/C 原生接口/公共-稳定性"
-      ]
+      ],
+      "plmCaseId": "TimechoDB-3362",
+      "plmId": 7933
     }
   ]
 }
