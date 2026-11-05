@@ -1,0 +1,1910 @@
+{
+  "productId": 1,
+  "defaults": {
+    "caseType": "功能测试",
+    "model": "通用",
+    "owner": "肖林捷",
+    "automationType": "session-c",
+    "executeMethod": "自动"
+  },
+  "cases": [
+    {
+      "target": "TreeLifecycle.Case01_NewSingleNode",
+      "name": "C 原生｜树模型-生命周期：ts_session_new 单节点创建",
+      "description": "验证ts_session_new 单节点创建。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case02_NewWithZone",
+      "name": "C 原生｜树模型-生命周期：ts_session_new_with_zone 带时区与 fetchSize，并可读回时区",
+      "description": "验证ts_session_new_with_zone 带时区与 fetchSize，并可读回时区。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case03_NewMultiNode",
+      "name": "C 原生｜树模型-生命周期：ts_session_new_multi_node 多节点 URL 创建并打开",
+      "description": "验证ts_session_new_multi_node 多节点 URL 创建并打开。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case04_Open",
+      "name": "C 原生｜树模型-生命周期：ts_session_open 普通打开",
+      "description": "验证ts_session_open 普通打开。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case05_OpenWithCompression",
+      "name": "C 原生｜树模型-生命周期：ts_session_open_with_compression 启用 RPC 压缩",
+      "description": "验证ts_session_open_with_compression 启用 RPC 压缩。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case06_87_CloseThenDestroy",
+      "name": "C 原生｜树模型-生命周期：close 后 destroy 的生命周期释放",
+      "description": "验证close 后 destroy 的生命周期释放。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case08_GetTimezone",
+      "name": "C 原生｜树模型-生命周期：ts_session_get_timezone 获取默认时区",
+      "description": "验证ts_session_get_timezone 获取默认时区。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case09_SetTimezone",
+      "name": "C 原生｜树模型-生命周期：ts_session_set_timezone 设置 Asia/Shanghai 后读回",
+      "description": "验证ts_session_set_timezone 设置 Asia/Shanghai 后读回。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case10_GetTimezoneBufferTooSmall",
+      "name": "C 原生｜树模型-生命周期：ts_session_get_timezone 缓冲区不足 -> 非 TS_OK，不越界",
+      "description": "验证ts_session_get_timezone 缓冲区不足 -> 非 TS_OK，不越界。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycle.Case89_RepeatedLifecycle",
+      "name": "C 原生｜树模型-生命周期：重复生命周期 open/close 循环多轮稳定",
+      "description": "验证重复生命周期 open/close 循环多轮稳定。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case07_WrongPassword",
+      "name": "C 原生｜树模型-生命周期：用户名正确密码错误 -> open 失败，错误信息含 801",
+      "description": "验证用户名正确密码错误 -> open 失败，错误信息含 801。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case90_ConnectionRefused",
+      "name": "C 原生｜树模型-生命周期：主机不可达/端口错误 -> 连接错误",
+      "description": "验证主机不可达/端口错误 -> 连接错误。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case91_WrongUser",
+      "name": "C 原生｜树模型-生命周期：用户名错误 -> open 失败",
+      "description": "验证用户名错误 -> open 失败。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case92_DoubleOpen",
+      "name": "C 原生｜树模型-生命周期：已 open 再次 open，幂等或可读错误，不崩溃",
+      "description": "验证已 open 再次 open，幂等或可读错误，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case93_OpenNull",
+      "name": "C 原生｜树模型-生命周期：ts_session_open(NULL) -> TS_ERR_NULL_PTR",
+      "description": "验证ts_session_open(NULL) -> TS_ERR_NULL_PTR。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case94_IllegalZone",
+      "name": "C 原生｜树模型-生命周期：非法 zoneId 创建会话，行为可控（不崩溃）",
+      "description": "验证非法 zoneId 创建会话，行为可控（不崩溃）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case95_SetIllegalZone",
+      "name": "C 原生｜树模型-生命周期：设置非法时区 -> 非 TS_OK，且不影响后续",
+      "description": "验证设置非法时区 -> 非 TS_OK，且不影响后续。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case96_CloseWithoutOpen",
+      "name": "C 原生｜树模型-生命周期：未 open 直接 close，再 destroy，不崩溃",
+      "description": "验证未 open 直接 close，再 destroy，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case97_DoubleClose",
+      "name": "C 原生｜树模型-生命周期：连续 close 两次幂等无崩溃",
+      "description": "验证连续 close 两次幂等无崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case98_DestroyWhileOpen",
+      "name": "C 原生｜树模型-生命周期：open 状态下直接 destroy（内部应关闭连接）",
+      "description": "验证open 状态下直接 destroy（内部应关闭连接）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case99_DestroyNull",
+      "name": "C 原生｜树模型-生命周期：ts_session_destroy(NULL) 为安全空操作",
+      "description": "验证ts_session_destroy(NULL) 为安全空操作。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeLifecycleError.Case100_UseAfterFreeDefense",
+      "name": "C 原生｜树模型-生命周期：destroy 后对会话调用接口（use-after-free 防御）—— 仅验证不段错误。",
+      "description": "验证destroy 后对会话调用接口（use-after-free 防御）—— 仅验证不段错误。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-生命周期"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case11_CreateDatabase",
+      "name": "C 原生｜树模型-Schema：创建数据库",
+      "description": "验证创建数据库。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case12_DeleteDatabase",
+      "name": "C 原生｜树模型-Schema：删除（空）数据库",
+      "description": "验证删除（空）数据库。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case13_DeleteDatabases",
+      "name": "C 原生｜树模型-Schema：批量删除数据库",
+      "description": "验证批量删除数据库。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case14_CreateTimeseries",
+      "name": "C 原生｜树模型-Schema：创建单条时间序列 + 存在性检查",
+      "description": "验证创建单条时间序列 + 存在性检查。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case15_CreateTimeseriesEx",
+      "name": "C 原生｜树模型-Schema：扩展建序列（属性/标签/别名）",
+      "description": "验证扩展建序列（属性/标签/别名）。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case16_CreateMultiTimeseries",
+      "name": "C 原生｜树模型-Schema：批量建序列",
+      "description": "验证批量建序列。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case17_CreateAlignedTimeseries",
+      "name": "C 原生｜树模型-Schema：创建对齐时间序列",
+      "description": "验证创建对齐时间序列。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case18_CheckExistsTrue",
+      "name": "C 原生｜树模型-Schema：已存在路径 exists=true",
+      "description": "验证已存在路径 exists=true。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case19_CheckExistsFalse",
+      "name": "C 原生｜树模型-Schema：不存在路径 exists=false",
+      "description": "验证不存在路径 exists=false。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case20_DeleteTimeseries",
+      "name": "C 原生｜树模型-Schema：单条删除后 exists=false",
+      "description": "验证单条删除后 exists=false。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchema.Case21_DeleteTimeseriesBatch",
+      "name": "C 原生｜树模型-Schema：批量删除时间序列",
+      "description": "验证批量删除时间序列。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case103_CreateDuplicateDatabase",
+      "name": "C 原生｜树模型-Schema：重复创建同名数据库 -> 非 TS_OK",
+      "description": "验证重复创建同名数据库 -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case104_DeleteNonexistDatabase",
+      "name": "C 原生｜树模型-Schema：删除不存在数据库 -> 行为可控（非 TS_OK 或幂等）",
+      "description": "验证删除不存在数据库 -> 行为可控（非 TS_OK 或幂等）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case105_DeleteDatabasesCountMismatch",
+      "name": "C 原生｜树模型-Schema：delete_databases count 与数组不一致 -> 非 TS_OK，不越界。",
+      "description": "验证delete_databases count 与数组不一致 -> 非 TS_OK，不越界。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case106_CreateDuplicateTimeseries",
+      "name": "C 原生｜树模型-Schema：重复创建同一 timeseries -> 非 TS_OK",
+      "description": "验证重复创建同一 timeseries -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case107_IllegalPath",
+      "name": "C 原生｜树模型-Schema：非法路径（不以 root. 开头）-> 非 TS_OK",
+      "description": "验证非法路径（不以 root. 开头）-> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case108_IncompatibleTypeEncoding",
+      "name": "C 原生｜树模型-Schema：类型与编码不兼容（BOOLEAN + GORILLA）-> 非 TS_OK",
+      "description": "验证类型与编码不兼容（BOOLEAN + GORILLA）-> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case109_AlignedCountMismatch",
+      "name": "C 原生｜树模型-Schema：对齐序列数组与 count 不一致 -> 非 TS_OK，不崩溃。",
+      "description": "验证对齐序列数组与 count 不一致 -> 非 TS_OK，不崩溃。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case110_CheckExistsNullOut",
+      "name": "C 原生｜树模型-Schema：check_timeseries_exists exists 出参为 NULL -> 非 TS_OK",
+      "description": "验证check_timeseries_exists exists 出参为 NULL -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "TreeSchemaError.Case111_DeleteNonexistTimeseries",
+      "name": "C 原生｜树模型-Schema：删除不存在序列 -> 行为可控，不崩溃",
+      "description": "验证删除不存在序列 -> 行为可控，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-Schema"
+      ]
+    },
+    {
+      "target": "Tablet.Case22_New",
+      "name": "C 原生｜公共-Tablet：ts_tablet_new 基础创建",
+      "description": "验证ts_tablet_new 基础创建。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case23_NewWithCategory",
+      "name": "C 原生｜公共-Tablet：ts_tablet_new_with_category 带列类别创建",
+      "description": "验证ts_tablet_new_with_category 带列类别创建。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case24_InitialRowCount",
+      "name": "C 原生｜公共-Tablet：新建 Tablet 行数初始为 0",
+      "description": "验证新建 Tablet 行数初始为 0。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case25_AddTimestampAndInt64",
+      "name": "C 原生｜公共-Tablet：add_timestamp + add_value_int64 写入并回读校验",
+      "description": "验证add_timestamp + add_value_int64 写入并回读校验。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case26_MultiTypeValues",
+      "name": "C 原生｜公共-Tablet：多类型写值（bool/int32/float/double/string）并回读",
+      "description": "验证多类型写值（bool/int32/float/double/string）并回读。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case28_SetRowCount",
+      "name": "C 原生｜公共-Tablet：set_row_count 控制有效行数，insert 仅写前 N 行",
+      "description": "验证set_row_count 控制有效行数，insert 仅写前 N 行。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case29_Reset",
+      "name": "C 原生｜公共-Tablet：reset 清状态后复用同一 Tablet",
+      "description": "验证reset 清状态后复用同一 Tablet。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case30_IndexOutOfRange",
+      "name": "C 原生｜公共-Tablet：非法 row/col 索引写入 -> 期望非 TS_OK 且不崩溃。",
+      "description": "验证非法 row/col 索引写入 -> 期望非 TS_OK 且不崩溃。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case101_DoubleDestroy",
+      "name": "C 原生｜公共-Tablet：Tablet 重复销毁无 double free",
+      "description": "验证Tablet 重复销毁无 double free。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "Tablet.Case102_ReuseAfterInsert",
+      "name": "C 原生｜公共-Tablet：insert 不转移所有权 -> reset 后复用再次 insert，最后单次 destroy",
+      "description": "验证insert 不转移所有权 -> reset 后复用再次 insert，最后单次 destroy。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case119_ZeroColumns",
+      "name": "C 原生｜公共-Tablet：columnCount=0 创建 -> 句柄可控（非空亦可，后续接口安全）",
+      "description": "验证columnCount=0 创建 -> 句柄可控（非空亦可，后续接口安全）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case120_CountArrayConsistency",
+      "name": "C 原生｜公共-Tablet：columnNames/dataTypes 与 columnCount 不一致。",
+      "description": "验证columnNames/dataTypes 与 columnCount 不一致。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case121_SetRowCountOverMax",
+      "name": "C 原生｜公共-Tablet：set_row_count(rowCount > maxRowNumber)",
+      "description": "验证set_row_count(rowCount > maxRowNumber)。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case122_AddTimestampRowOutOfRange",
+      "name": "C 原生｜公共-Tablet：add_timestamp rowIndex >= maxRowNumber -> 期望非 TS_OK。",
+      "description": "验证add_timestamp rowIndex >= maxRowNumber -> 期望非 TS_OK。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case123_TypeMismatchSetter",
+      "name": "C 原生｜公共-Tablet：类型不匹配 setter（对 INT64 列调用 string setter）-> 可控",
+      "description": "验证类型不匹配 setter（对 INT64 列调用 string setter）-> 可控。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TabletError.Case124_AddValueNullTablet",
+      "name": "C 原生｜公共-Tablet：add_value_int64(NULL,...) -> TS_ERR_NULL_PTR",
+      "description": "验证add_value_int64(NULL,...) -> TS_ERR_NULL_PTR。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-Tablet"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case31_InsertRecordStr",
+      "name": "C 原生｜树模型-写入：insert_record_str 字符串值单条写入",
+      "description": "验证insert_record_str 字符串值单条写入。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case32_InsertRecordTyped",
+      "name": "C 原生｜树模型-写入：insert_record 强类型 INT32/DOUBLE/INT64",
+      "description": "验证insert_record 强类型 INT32/DOUBLE/INT64。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case33_InsertRecordNewTypes",
+      "name": "C 原生｜树模型-写入：insert_record 新类型 TIMESTAMP/DATE/BLOB/STRING",
+      "description": "验证insert_record 新类型 TIMESTAMP/DATE/BLOB/STRING。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case34_InsertRecordsStr",
+      "name": "C 原生｜树模型-写入：insert_records_str 多设备批量字符串",
+      "description": "验证insert_records_str 多设备批量字符串。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case35_InsertRecordsTyped",
+      "name": "C 原生｜树模型-写入：insert_records 强类型批量",
+      "description": "验证insert_records 强类型批量。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case36_InsertRecordsOfOneDevice",
+      "name": "C 原生｜树模型-写入：insert_records_of_one_device sorted=true",
+      "description": "验证insert_records_of_one_device sorted=true。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case37_AlignedRecordStr",
+      "name": "C 原生｜树模型-写入：insert_aligned_record_str",
+      "description": "验证insert_aligned_record_str。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case38_AlignedRecordTyped",
+      "name": "C 原生｜树模型-写入：insert_aligned_record 强类型",
+      "description": "验证insert_aligned_record 强类型。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case39_AlignedRecordsStr",
+      "name": "C 原生｜树模型-写入：insert_aligned_records_str",
+      "description": "验证insert_aligned_records_str。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case40_AlignedRecordsTyped",
+      "name": "C 原生｜树模型-写入：insert_aligned_records 强类型",
+      "description": "验证insert_aligned_records 强类型。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case41_AlignedRecordsOfOneDevice",
+      "name": "C 原生｜树模型-写入：insert_aligned_records_of_one_device",
+      "description": "验证insert_aligned_records_of_one_device。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case42_InsertTablet",
+      "name": "C 原生｜树模型-写入：insert_tablet 单 Tablet",
+      "description": "验证insert_tablet 单 Tablet。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case43_InsertTablets",
+      "name": "C 原生｜树模型-写入：insert_tablets 多设备",
+      "description": "验证insert_tablets 多设备。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case44_AlignedTablet",
+      "name": "C 原生｜树模型-写入：insert_aligned_tablet 对齐单 Tablet",
+      "description": "验证insert_aligned_tablet 对齐单 Tablet。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case45_AlignedTablets",
+      "name": "C 原生｜树模型-写入：insert_aligned_tablets 多对齐 Tablet",
+      "description": "验证insert_aligned_tablets 多对齐 Tablet。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case46_AlignedWriteToNonAligned",
+      "name": "C 原生｜树模型-写入：对非对齐设备使用对齐写入 -> 服务端不报错（改写 isAligned）",
+      "description": "验证对非对齐设备使用对齐写入 -> 服务端不报错（改写 isAligned）。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsert.Case47_NonAlignedWriteToAligned",
+      "name": "C 原生｜树模型-写入：对对齐设备使用非对齐写入 -> 服务端不报错（改写 isAligned）",
+      "description": "验证对对齐设备使用非对齐写入 -> 服务端不报错（改写 isAligned）。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case112_RecordStrCountMismatch",
+      "name": "C 原生｜树模型-写入：insert_record_str count 与 measurements/values 数量不符 -> 非 TS_OK。",
+      "description": "验证insert_record_str count 与 measurements/values 数量不符 -> 非 TS_OK。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case113_RecordTypeMismatch",
+      "name": "C 原生｜树模型-写入：insert_record 值类型与序列声明不符 -> 非 TS_OK 或按服务端规则",
+      "description": "验证insert_record 值类型与序列声明不符 -> 非 TS_OK 或按服务端规则。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case114_RecordStrNullSession",
+      "name": "C 原生｜树模型-写入：insert_record_str(NULL session) -> TS_ERR_NULL_PTR",
+      "description": "验证insert_record_str(NULL session) -> TS_ERR_NULL_PTR。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case115_EmptyMeasurements",
+      "name": "C 原生｜树模型-写入：空测点 count=0 -> 可控，不崩溃",
+      "description": "验证空测点 count=0 -> 可控，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case116_InsertTabletNoRowCount",
+      "name": "C 原生｜树模型-写入：insert_tablet 未设置行数（row_count=0）-> 写 0 行或非 OK，不崩溃",
+      "description": "验证insert_tablet 未设置行数（row_count=0）-> 写 0 行或非 OK，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case117_TabletColumnTypeMismatch",
+      "name": "C 原生｜树模型-写入：Tablet 列类型与序列不一致 -> 非 TS_OK",
+      "description": "验证Tablet 列类型与序列不一致 -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeInsertError.Case118_InsertTabletsCountMismatch",
+      "name": "C 原生｜树模型-写入：insert_tablets tabletCount 与数组不一致 -> 不越界、不崩溃。",
+      "description": "验证insert_tablets tabletCount 与数组不一致 -> 不越界、不崩溃。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-写入"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case48_ExecuteQuery",
+      "name": "C 原生｜树模型-查询：execute_query 普通查询",
+      "description": "验证execute_query 普通查询。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case49_QueryWithTimeout",
+      "name": "C 原生｜树模型-查询：execute_query_with_timeout",
+      "description": "验证execute_query_with_timeout。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case50_ExecuteNonQuery",
+      "name": "C 原生｜树模型-查询：execute_non_query 执行 insert/DDL",
+      "description": "验证execute_non_query 执行 insert/DDL。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case51_RawDataQuery",
+      "name": "C 原生｜树模型-查询：raw_data_query 正常时间范围",
+      "description": "验证raw_data_query 正常时间范围。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case52_RawDataQueryNegativeTime",
+      "name": "C 原生｜树模型-查询：raw_data_query 负时间戳范围",
+      "description": "验证raw_data_query 负时间戳范围。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case53_RawDataQueryWithNull",
+      "name": "C 原生｜树模型-查询：raw_data_query 包含空值列（部分列在某时间点为空）",
+      "description": "验证raw_data_query 包含空值列（部分列在某时间点为空）。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case54_LastDataQuery",
+      "name": "C 原生｜树模型-查询：last_data_query 不带 lastTime",
+      "description": "验证last_data_query 不带 lastTime。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case55_LastDataQueryWithTime",
+      "name": "C 原生｜树模型-查询：last_data_query_with_time 带 lastTime",
+      "description": "验证last_data_query_with_time 带 lastTime。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case56_LastDataQueryFutureEmpty",
+      "name": "C 原生｜树模型-查询：last_data_query_with_time future 时间无结果",
+      "description": "验证last_data_query_with_time future 时间无结果。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case57_ColumnCount",
+      "name": "C 原生｜树模型-查询：dataset_get_column_count",
+      "description": "验证dataset_get_column_count。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case58_ColumnNameType",
+      "name": "C 原生｜树模型-查询：dataset_get_column_name / column_type",
+      "description": "验证dataset_get_column_name / column_type。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case59_SetFetchSize",
+      "name": "C 原生｜树模型-查询：set_fetch_size 大于 1 的批大小",
+      "description": "验证set_fetch_size 大于 1 的批大小。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case60_RowTimestampFieldCount",
+      "name": "C 原生｜树模型-查询：row timestamp + field_count",
+      "description": "验证row timestamp + field_count。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case61_RowTypedGetters",
+      "name": "C 原生｜树模型-查询：row get bool/int32/int64/float/double/string",
+      "description": "验证row get bool/int32/int64/float/double/string。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case62_RowDataType",
+      "name": "C 原生｜树模型-查询：row get_data_type",
+      "description": "验证row get_data_type。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQuery.Case63_RowIsNull",
+      "name": "C 原生｜树模型-查询：row is_null 空字段识别",
+      "description": "验证row is_null 空字段识别。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case125_SyntaxError",
+      "name": "C 原生｜树模型-查询：语法错误 SQL -> 非 TS_OK",
+      "description": "验证语法错误 SQL -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case126_EmptyResult",
+      "name": "C 原生｜树模型-查询：空结果集",
+      "description": "验证空结果集。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case127_QueryNullOut",
+      "name": "C 原生｜树模型-查询：execute_query dataSet 出参为 NULL -> 非 TS_OK",
+      "description": "验证execute_query dataSet 出参为 NULL -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case128_NonQueryIllegal",
+      "name": "C 原生｜树模型-查询：非法非查询 SQL -> 非 TS_OK",
+      "description": "验证非法非查询 SQL -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case129_RawDataQueryZeroPaths",
+      "name": "C 原生｜树模型-查询：raw_data_query pathCount=0",
+      "description": "验证raw_data_query pathCount=0。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case130_RawDataQueryReversedTime",
+      "name": "C 原生｜树模型-查询：raw_data_query startTime>endTime",
+      "description": "验证raw_data_query startTime>endTime。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case131_LastDataQueryNonexist",
+      "name": "C 原生｜树模型-查询：last_data_query 不存在 path -> 空集",
+      "description": "验证last_data_query 不存在 path -> 空集。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case132_ColumnNameOutOfRange",
+      "name": "C 原生｜树模型-查询：column_name 越界 -> 返回空（实现返回 \"\"），不崩溃",
+      "description": "验证column_name 越界 -> 返回空（实现返回 \"\"），不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case133_ColumnTypeOutOfRange",
+      "name": "C 原生｜树模型-查询：column_type 越界（index=-1）-> 返回空，不崩溃",
+      "description": "验证column_type 越界（index=-1）-> 返回空，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case134_NextAfterExhausted",
+      "name": "C 原生｜树模型-查询：结果集耗尽后再 next -> NULL",
+      "description": "验证结果集耗尽后再 next -> NULL。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case135_DatasetUseAfterFreeDefense",
+      "name": "C 原生｜树模型-查询：dataSet use-after-free 防御（以 NULL 句柄验证不崩溃）",
+      "description": "验证dataSet use-after-free 防御（以 NULL 句柄验证不崩溃）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case136_DataTypeOutOfRange",
+      "name": "C 原生｜树模型-查询：row get_data_type 越界 -> TS_TYPE_INVALID",
+      "description": "验证row get_data_type 越界 -> TS_TYPE_INVALID。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case137_GetterTypeMismatch",
+      "name": "C 原生｜树模型-查询：getter 类型不匹配（对文本列调用 int getter）-> 可控，不崩溃",
+      "description": "验证getter 类型不匹配（对文本列调用 int getter）-> 可控，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case138_IsNullOutOfRange",
+      "name": "C 原生｜树模型-查询：row is_null 越界 -> 返回 true，不崩溃",
+      "description": "验证row is_null 越界 -> 返回 true，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeQueryError.Case139_FetchSizeNonPositive",
+      "name": "C 原生｜树模型-查询：set_fetch_size <= 0 边界",
+      "description": "验证set_fetch_size <= 0 边界。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-查询"
+      ]
+    },
+    {
+      "target": "TreeDelete.Case65_DeleteData",
+      "name": "C 原生｜树模型-删除：delete_data 单路径按 endTime 删除",
+      "description": "验证delete_data 单路径按 endTime 删除。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-删除"
+      ]
+    },
+    {
+      "target": "TreeDelete.Case66_DeleteDataBatch",
+      "name": "C 原生｜树模型-删除：delete_data_batch 多路径按 endTime 删除",
+      "description": "验证delete_data_batch 多路径按 endTime 删除。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-删除"
+      ]
+    },
+    {
+      "target": "TreeDelete.Case67_DeleteDataRange",
+      "name": "C 原生｜树模型-删除：delete_data_range 多路径时间区间删除",
+      "description": "验证delete_data_range 多路径时间区间删除。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-删除"
+      ]
+    },
+    {
+      "target": "TreeDeleteError.Case140_RangeReversed",
+      "name": "C 原生｜树模型-删除：delete_data_range startTime>endTime -> 非 TS_OK 或不删除",
+      "description": "验证delete_data_range startTime>endTime -> 非 TS_OK 或不删除。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-删除"
+      ]
+    },
+    {
+      "target": "TreeDeleteError.Case141_BatchWithNonexist",
+      "name": "C 原生｜树模型-删除：delete_data_batch 含不存在路径 -> 可控，不崩溃",
+      "description": "验证delete_data_batch 含不存在路径 -> 可控，不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "树模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/树模型-删除"
+      ]
+    },
+    {
+      "target": "TableLifecycle.Case68_NewEmptyDatabase",
+      "name": "C 原生｜表模型-生命周期：ts_table_session_new database 为空字符串可创建/打开",
+      "description": "验证ts_table_session_new database 为空字符串可创建/打开。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycle.Case69_NewMultiNode",
+      "name": "C 原生｜表模型-生命周期：ts_table_session_new_multi_node",
+      "description": "验证ts_table_session_new_multi_node。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycle.Case70_OpenCloseDestroy",
+      "name": "C 原生｜表模型-生命周期：open/close/destroy 正常释放",
+      "description": "验证open/close/destroy 正常释放。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycle.Case71_DDL",
+      "name": "C 原生｜表模型-生命周期：DDL 建库/切库/建表，SHOW TABLES 可见",
+      "description": "验证DDL 建库/切库/建表，SHOW TABLES 可见。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycleError.Case142_NullDatabase",
+      "name": "C 原生｜表模型-生命周期：ts_table_session_new database=NULL（可空性以实现为准）",
+      "description": "验证ts_table_session_new database=NULL（可空性以实现为准）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycleError.Case143_ConnectionRefused",
+      "name": "C 原生｜表模型-生命周期：主机不可达 -> 连接错误。",
+      "description": "验证主机不可达 -> 连接错误。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycleError.Case147_ExecuteAfterClose",
+      "name": "C 原生｜表模型-生命周期：close 后再 execute -> 期望非 TS_OK。",
+      "description": "验证close 后再 execute -> 期望非 TS_OK。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableLifecycleError.Case148_UseAfterFreeDefense",
+      "name": "C 原生｜表模型-生命周期：destroy 后调用（use-after-free 防御）—— 以 NULL 句柄验证不崩溃",
+      "description": "验证destroy 后调用（use-after-free 防御）—— 以 NULL 句柄验证不崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-生命周期"
+      ]
+    },
+    {
+      "target": "TableWrite.Case72_InsertCategoryTablet",
+      "name": "C 原生｜表模型-写入与查询：带列类别 Tablet 写入（TAG+ATTRIBUTE+FIELD）",
+      "description": "验证带列类别 Tablet 写入（TAG+ATTRIBUTE+FIELD）。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWrite.Case73_SelectAll",
+      "name": "C 原生｜表模型-写入与查询：普通查询 SELECT *",
+      "description": "验证普通查询 SELECT *。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWrite.Case74_QueryWithTimeout",
+      "name": "C 原生｜表模型-写入与查询：超时查询",
+      "description": "验证超时查询。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWrite.Case75_DatasetColumnInfo",
+      "name": "C 原生｜表模型-写入与查询：表模型结果集列信息 + 行记录元信息",
+      "description": "验证表模型结果集列信息 + 行记录元信息。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWrite.Case76_MultiTypeTablet",
+      "name": "C 原生｜表模型-写入与查询：多类型 Tablet 写入与回读",
+      "description": "验证多类型 Tablet 写入与回读。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWriteError.Case144_SyntaxError",
+      "name": "C 原生｜表模型-写入与查询：语法错误 SQL -> 非 TS_OK",
+      "description": "验证语法错误 SQL -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWriteError.Case145_InsertNonexistTable",
+      "name": "C 原生｜表模型-写入与查询：未 USE 数据库 / 表不存在写入 -> 非 TS_OK。",
+      "description": "验证未 USE 数据库 / 表不存在写入 -> 非 TS_OK。。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableWriteError.Case146_ColumnCategoryMismatch",
+      "name": "C 原生｜表模型-写入与查询：Tablet 列类别与表 schema 不符 -> 非 TS_OK",
+      "description": "验证Tablet 列类别与表 schema 不符 -> 非 TS_OK。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-写入与查询"
+      ]
+    },
+    {
+      "target": "TableQueryNonexistent.Case_QueryNonexistentTable_ErrorMessageIsSpecific",
+      "name": "C 原生｜表模型-查询：Case_QueryNonexistentTable_ErrorMessageIsSpecific",
+      "description": "验证Case_QueryNonexistentTable_ErrorMessageIsSpecific。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "表模型",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/表模型-查询"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case82_LastErrorAfterFailure",
+      "name": "C 原生｜公共-错误处理与资源：失败调用后 ts_get_last_error 返回最近一次错误信息",
+      "description": "验证失败调用后 ts_get_last_error 返回最近一次错误信息。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case83_LastErrorPointerLifecycle",
+      "name": "C 原生｜公共-错误处理与资源：last_error 指针只保证到下一次 C API 调用前有效 -> 需复制内容",
+      "description": "验证last_error 指针只保证到下一次 C API 调用前有效 -> 需复制内容。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case84_DatasetDestroy",
+      "name": "C 原生｜公共-错误处理与资源：dataSet 释放稳定性（遍历完/未遍历完均可 destroy）",
+      "description": "验证dataSet 释放稳定性（遍历完/未遍历完均可 destroy）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case85_RowRecordDestroy",
+      "name": "C 原生｜公共-错误处理与资源：逐行 ts_row_record_destroy 无泄漏/崩溃",
+      "description": "验证逐行 ts_row_record_destroy 无泄漏/崩溃。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case86_TabletOwnership",
+      "name": "C 原生｜公共-错误处理与资源：insert 后不转移 Tablet 所有权，写入后仍由调用方 destroy",
+      "description": "验证insert 后不转移 Tablet 所有权，写入后仍由调用方 destroy。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case87_CloseThenDestroy",
+      "name": "C 原生｜公共-错误处理与资源：close 仅关闭连接，destroy 仍需显式调用",
+      "description": "验证close 仅关闭连接，destroy 仍需显式调用。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case149_LastErrorInitialState",
+      "name": "C 原生｜公共-错误处理与资源：无失败调用时 ts_get_last_error 返回值可控（在新线程内验证）",
+      "description": "验证无失败调用时 ts_get_last_error 返回值可控（在新线程内验证）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case150_LastErrorAfterSuccess",
+      "name": "C 原生｜公共-错误处理与资源：成功调用后语义（成功不保证清空错误信息）",
+      "description": "验证成功调用后语义（成功不保证清空错误信息）。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "ErrorResource.Case151_LastErrorThreadLocal",
+      "name": "C 原生｜公共-错误处理与资源：ts_get_last_error 线程局部，A 线程失败不影响 B 线程",
+      "description": "验证ts_get_last_error 线程局部，A 线程失败不影响 B 线程。",
+      "priority": "P2",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-错误处理与资源"
+      ]
+    },
+    {
+      "target": "Stability.Case88_153_LargeResultSet",
+      "name": "C 原生｜公共-稳定性：大结果集稳定遍历，逐行释放，行数一致",
+      "description": "验证大结果集稳定遍历，逐行释放，行数一致。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-稳定性"
+      ]
+    },
+    {
+      "target": "Stability.Case152_ConcurrentSessions",
+      "name": "C 原生｜公共-稳定性：多线程各自独立会话并发读写，数据互不串扰，无崩溃",
+      "description": "验证多线程各自独立会话并发读写，数据互不串扰，无崩溃。",
+      "priority": "P1",
+      "caseType": "功能测试",
+      "model": "通用",
+      "automationType": "session-c",
+      "executeMethod": "自动",
+      "featurePaths": [
+        "接口模块/C 原生接口/公共-稳定性"
+      ]
+    }
+  ]
+}

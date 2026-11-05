@@ -12,16 +12,34 @@
 #include "SessionC.h"      // 唯一的 IoTDB 头文件
 #include "gtest/gtest.h"   // 测试框架
 
+#include <cstdlib>
 #include <cstring>
 #include <string>
 
 namespace ctest {
 
-/* ---------------- 连接参数（按环境修改） ---------------- */
-static const char* kHost = "127.0.0.1";
-static const int   kPort = 6667;
-static const char* kUser = "root";
-static const char* kPass = "root";
+/* ---------------- 连接参数（环境变量优先） ----------------
+ *
+ * 优先级：IOTDB_HOST / IOTDB_PORT / IOTDB_USER / IOTDB_PASSWORD > 默认值。
+ * PLM 的 session-c 不注入 IOTDB_HOST/IOTDB_PORT，默认连执行机本地 127.0.0.1:6667；
+ * 手工运行或需要其他地址时设置上述环境变量。账号口令默认 TimechoDB 的 root/TimechoDB@2021。
+ * 独立运行（如 111 节点）如需 root/root，设置 IOTDB_USER=root IOTDB_PASSWORD=root 即可。
+ */
+inline const char* envOr(const char* name, const char* fallback) {
+    const char* value = std::getenv(name);
+    return (value != nullptr && value[0] != '\0') ? value : fallback;
+}
+
+inline int envPortOr(const char* name, int fallback) {
+    const char* value = std::getenv(name);
+    if (value == nullptr || value[0] == '\0') return fallback;
+    return std::atoi(value);
+}
+
+static const char* kHost = envOr("IOTDB_HOST", "127.0.0.1");
+static const int   kPort = envPortOr("IOTDB_PORT", 6667);
+static const char* kUser = envOr("IOTDB_USER", "root");
+static const char* kPass = envOr("IOTDB_PASSWORD", "TimechoDB@2021");
 
 static const char* kWrongPass = "wrong_password_for_test";
 static const char* kWrongUser = "no_such_user_for_test";

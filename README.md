@@ -98,8 +98,11 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 
 ## 二、使用
 
-连接参数在 `test/common/c_test_common.h` 顶部（默认 `127.0.0.1:6667`，`root` / `TimechoDB@2021`），
-按实际环境修改。需先启动 IoTDB / TimechoDB 服务。
+连接参数在 `test/common/c_test_common.h` 顶部，**环境变量优先**：
+`IOTDB_HOST` / `IOTDB_PORT` / `IOTDB_USER` / `IOTDB_PASSWORD`。默认 `127.0.0.1:6667`，
+`root` / `TimechoDB@2021`（TimechoDB 默认口令）。需先启动 IoTDB / TimechoDB 服务。
+
+> 111 节点等使用 `root/root` 的环境，独立运行时显式设置 `IOTDB_USER=root IOTDB_PASSWORD=root`。
 
 ```bash
 # 编译
@@ -111,6 +114,31 @@ mvn package -DskipTests -P with-cpp -pl example/client-c-example,iotdb-client/cl
 # 跑 C 示例程序（需先在根 CMakeLists.txt 取消 add_subdirectory("example") 注释并重新编译）
 ./run.sh -m example
 ```
+
+### PLM 执行入口
+
+PLM 通过仓库根目录的 `start.sh` 派发单条用例：
+
+```bash
+sh start.sh prepare                 # 编译（需先准备 client/include、client/lib）
+sh start.sh list-cases --json       # 输出用例清单 JSON（导入回填后非空）
+sh start.sh case <CASE_ID>          # 执行单条，产物在 $PLM_REPORT_DIR/case-<ID>.xml
+```
+
+PLM 的 `session-c` 类型不创建 K8s 实例、不注入 `IOTDB_HOST` / `IOTDB_PORT`，测试程序默认连
+执行机本地 TimechoDB（`127.0.0.1:6667`）。**执行机必须常驻本地 TimechoDB（root / TimechoDB@2021）**；
+手工运行或需要其他地址时，设置 `IOTDB_HOST` / `IOTDB_PORT`（PLM 派发没有注入入口）。
+`.plm-case-defs.json` 是 146 条用例的导入定义，`.plm-case-id-map.json` 在导入后回填
+PLM 用例 ID 与 gtest target 的映射。**回填后的 `.plm-case-id-map.json` 必须提交到绑定分支**，
+否则新执行机 clone 后 `list-cases` 为空、`case` 找不到目标；回填前 PLM 绑定页显示程序侧 0 条属预期。
+
+> **测试副作用**：用例会创建/删除 `root.c_*`、`c_w_db*`、`db_a` 等专属库；执行机本地库上的同名库会被覆盖。
+> 3 条 `GTEST_SKIP`（30/122/147）对应 `REPORT.md` 的源码缺陷跟踪，PLM 中显示 SKIPPED 属预期。
+
+> **为什么 C 不跑 K8s 实例**：PLM 的 K8s 实例会把连接重定向到 `*.svc.cluster.local`，当前 C 客户端
+> （SessionC）没有关闭重定向的接口，执行机无法解析该域名。因此 C 接入 PLM 时直接连执行机本地
+> TimechoDB；若后续要求跑 K8s 实例，需要 C 客户端补齐关闭重定向能力（上游 apache/iotdb 的 C++
+> 客户端有 `enableRedirections`，C 封装尚未暴露）。
 
 ## 三、用例与需求对应
 
